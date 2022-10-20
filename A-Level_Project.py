@@ -1,7 +1,6 @@
 from tkinter import *
 import tkinter as tk
 import math
-from network import Network
 from PIL import ImageTk, Image
 
 # ------------------------------------------------------------------------------
