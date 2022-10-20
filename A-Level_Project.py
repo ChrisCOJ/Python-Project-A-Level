@@ -12,7 +12,6 @@ from PIL import ImageTk, Image
 class GameBoard(tk.Frame):
     def __init__(self, parent, rows=6, columns=6, size=92, color="blue"):
         # size is the size of a square, in pixels
-        self.net = Network()
         self.rows = rows
         self.columns = columns
         self.size = size
