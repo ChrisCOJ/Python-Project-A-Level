@@ -1,4 +1,4 @@
-# Beginner Python project for A-Level
+# Beginner Python project for college
 
 Very simple board game with a UI (tkinter) where a piece advances with correct answerws to a quiz
 
