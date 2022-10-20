@@ -8,11 +8,6 @@ from PIL import ImageTk, Image
 # ------------------------------------------------------------------------------
 
 # GUI INTERFACE FOR THE ACTUAL BOARD GAME
-# GUI INTERFACE FOR THE ACTUAL BOARD GAME
-# GUI INTERFACE FOR THE ACTUAL BOARD GAME
-# GUI INTERFACE FOR THE ACTUAL BOARD GAME
-# GUI INTERFACE FOR THE ACTUAL BOARD GAME
-# GUI INTERFACE FOR THE ACTUAL BOARD GAME
 
 class GameBoard(tk.Frame):
     def __init__(self, parent, rows=6, columns=6, size=92, color="blue"):
@@ -117,7 +112,6 @@ class GameBoard(tk.Frame):
             print(self.pos)
             print("x: ", x, "\n", "y: ", y)
             self.placepiece(name, x, y)
-            self.pos[0], self.pos[1] = self.parse_data(self.send_data())
         elif name == "player2":
             x = (self.pos2[1] - math.floor(self.size / 2)) / self.size
             y = (self.pos2[0] - math.floor(self.size / 2)) / self.size
@@ -132,38 +126,14 @@ class GameBoard(tk.Frame):
             print(self.pos2)
             print("x2: ", x, "\n", "y2: ", y)
             self.placepiece(name, x, y)
-        self.pos2[0], self.pos2[1] = self.parse_data(self.send_data())
 
 
-
-    # Handle server data
-    def send_data(self):
-        """
-        Send position to server
-        :return: None
-        """
-        data = str(self.net.id) + ":" + str(self.pos[0]) + "," + str(self.pos2[1])
-        reply = self.net.send(data)
-        return reply
-
-    def parse_data(self, data):
-        try:
-            d = data.split(":")[1].split(",")
-            return int(d[0]), int(d[1])
-        except:
-            return 0, 0
 
 
 # ------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------
 
 # Quiz
-# Quiz
-# Quiz
-# Quiz
-# Quiz
-# Quiz
-
 
 
 def check(letter, view):
